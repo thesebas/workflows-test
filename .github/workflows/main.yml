@@ -15,3 +15,5 @@ jobs:
         run: which node && node --version || true
       - name: python?
         run: which python && python --version || true
+      - name: php?
+        run: which php && php --version || true        
