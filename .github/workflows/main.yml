@@ -9,6 +9,8 @@ jobs:
     name: my script
     runs-on: ubuntu-latest
     steps:
+      - name: perl?
+        run: which perl && perl --version || true     
       - name: lua?
         run: which lua && lua -v || true      
       - name: go?
