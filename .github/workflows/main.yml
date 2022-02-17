@@ -9,6 +9,10 @@ jobs:
     name: my script
     runs-on: ubuntu-latest
     steps:
+      - name: docker?
+        run: which docker && docker --version && docker-compose --version || true    
+      - name: jq?
+        run: which jq && jq --version || true    
       - name: perl?
         run: which perl && perl --version || true     
       - name: lua?
