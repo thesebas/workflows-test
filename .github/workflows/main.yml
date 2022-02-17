@@ -9,6 +9,8 @@ jobs:
     name: my script
     runs-on: ubuntu-latest
     steps:
+      - name: lua?
+        run: which lua && lua -v || true      
       - name: go?
         run: which go && go version || true
       - name: node?
