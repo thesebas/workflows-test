@@ -1,0 +1,17 @@
+name: Main
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  run_script:
+    name: my script
+    runs-on: ubuntu-latest
+    steps:
+      - name: go?
+        run: which go && go version || true
+      - name: node?
+        run: which node && node --version || true
+      - name: python?
+        run: which python && python --version || true
