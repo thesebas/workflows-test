@@ -9,6 +9,8 @@ jobs:
     name: my script
     runs-on: ubuntu-latest
     steps:
+      - name: shellcheck?
+        run: which shellcheck & shellcheck --version || true   
       - name: docker?
         run: which docker && docker --version && docker-compose --version || true    
       - name: jq?
