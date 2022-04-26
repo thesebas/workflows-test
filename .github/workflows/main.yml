@@ -13,3 +13,7 @@ jobs:
     steps:
       - name: print 
         run: echo ${{ toJSON(github.ref_name) }}
+      - name: build
+        run: head -c 1026 /dev/random | base64 > mybinary_${{github.ref_name}}.bin
+      - name: upload binary as artifact
+        run: gh release upload ${{github.ref_name}} mybinary_${{github.ref_name}}.bin
