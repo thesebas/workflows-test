@@ -17,3 +17,5 @@ jobs:
         run: head -c 1026 /dev/random | base64 > mybinary_${{github.ref_name}}.bin
       - name: upload binary as artifact
         run: gh release upload ${{github.ref_name}} mybinary_${{github.ref_name}}.bin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
