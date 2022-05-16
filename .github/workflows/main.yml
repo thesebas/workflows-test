@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print 
-        run: echo ${{ toJSON(github.ref_name) }}
+        run: echo xxx "${{ toJSON(github) }}" xxx
       - name: build
         run: head -c 1026 /dev/random | base64 > mybinary_${{github.ref_name}}.bin
       - name: upload binary as artifact
